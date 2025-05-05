@@ -1,1 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/keyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="Выбрать ключ"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/connectButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Подключиться"
+        android:enabled="false"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/keyButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1E1E1E"
+        app:layout_constraintBottom_toTopOf="@+id/shortcutButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyButton">
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:textColor="#00FF00"
+            android:textSize="12sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/shortcutButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="CS:GO Start"
+        android:textSize="10sp"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/commandInput"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutButton2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shortcutButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SteamCMD"
+        android:textSize="10sp"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/commandInput"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutButton3"
+        app:layout_constraintStart_toEndOf="@+id/shortcutButton1" />
+
+    <Button
+        android:id="@+id/shortcutButton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="RCON"
+        android:textSize="10sp"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/commandInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shortcutButton2" />
+
+    <EditText
+        android:id="@+id/commandInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#2C2C2C"
+        android:fontFamily="monospace"
+        android:hint="Введите команду..."
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Отправить"
+        android:backgroundTint="#2C2C2C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
